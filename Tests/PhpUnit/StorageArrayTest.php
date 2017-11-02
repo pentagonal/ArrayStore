@@ -147,7 +147,7 @@ class StorageArrayTest extends TestCase
         $storage[] = 'Inheritance';
         $this->assertNotEquals(
             $array,
-            $storage->toArray();
+            $storage->toArray()
         );
     }
 

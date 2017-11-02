@@ -200,7 +200,12 @@ class StorageArray implements StorageInterface
      */
     public function offsetSet($offset, $value)
     {
-        $this->set($offset, $value);
+        if ($offset === null) {
+            $this->data[] = $value;
+            return;
+        }
+
+        $this->data[$offset] = $value;
     }
 
     /**

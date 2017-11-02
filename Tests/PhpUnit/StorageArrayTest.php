@@ -141,6 +141,14 @@ class StorageArrayTest extends TestCase
             \ArrayIterator::class,
             $storage->getIterator()
         );
+
+        $array = $storage->toArray();
+        // add inheritance
+        $storage[] = 'Inheritance';
+        $this->assertNotEquals(
+            $array,
+            $storage->toArray();
+        );
     }
 
     public function testExceptionsFromArrayStorageSerialize()

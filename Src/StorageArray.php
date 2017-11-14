@@ -36,7 +36,7 @@ class StorageArray implements StorageInterface
     /**
      * @var array
      */
-    protected $data;
+    protected $data = [];
 
     /**
      * StorageArrayObject constructor.
